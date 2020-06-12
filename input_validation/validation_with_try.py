@@ -19,6 +19,8 @@ def average(in_1, in_2, in_3):
     if score1 < 0:
         raise ValueError
     score2 = int(final[1])
+    if score2 < 0:
+        raise ValueError
     score3 = int(final[2])
 
     nums = (score1 + score2 + score3) / 3
