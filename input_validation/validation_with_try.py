@@ -16,12 +16,14 @@ and average it for each student
 def average(in_1, in_2, in_3):
     final = [in_1, in_2, in_3]
     score1 = int(final[0])
+    score2 = int(final[1])
+    score3 = int(final[2])
+
     if score1 < 0:
         raise ValueError
-    score2 = int(final[1])
-    if score2 < 0:
+    elif score2 < 0:
         raise ValueError
-    score3 = int(final[2])
+
 
     nums = (score1 + score2 + score3) / 3
     return nums
