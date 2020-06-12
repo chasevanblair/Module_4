@@ -18,6 +18,8 @@ def average(in_1, in_2, in_3):
     #final = scores_input.split(",")
     final = [in_1, in_2, in_3]
     score1 = int(final[0])
+    if score1 < 0:
+        raise ValueError
     score2 = int(final[1])
     score3 = int(final[2])
 
