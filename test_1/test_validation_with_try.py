@@ -17,9 +17,15 @@ from input_validation.validation_with_try import average
 
 
 class MyTestCase(unittest.TestCase):
+
     def test_average_exception(self):
-        with self.assertRaises(ValueError):
-            average(90, 89, -78)
+        try:
+            with self.assertRaises(ValueError):
+                average(90, 89, -78)
+        except ValueError:
+            print("ValueError not raised")
+        else:
+            print("ValueError raised")
 
 
 if __name__ == "__main__":
